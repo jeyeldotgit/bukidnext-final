@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito+Sans:wght@400;600&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* 🎨 Custom Color Scheme */
+  --color-primary: #2e5a1c; /* Deep green */
+  --color-secondary: #8b5e3c; /* Earth brown */
+  --color-accent: #ffb800; /* Sunshine yellow */
+  --color-background: #f9f7f4; /* Off-white */
+  --color-white: #ffffff;
+  --color-black: #1a1a1a;
+
+  /* ✍️ Typography */
+  --font-headline: "Poppins", sans-serif;
+  --font-body: "Nunito Sans", sans-serif;
+
+  /* 🖋 Text Colors */
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: #4b5563; /* Tailwind gray-600 */
+  --color-text-on-primary: var(--color-white);
+
+  /* 🌅 Backgrounds */
+  --bg-gradient-primary: linear-gradient(
+    to right,
+    var(--color-primary) 0%,
+    var(--color-secondary) 70%,
+    transparent 100%
+  );
+}
+
+/* 🧱 Base Styles */
+@layer base {
+  html {
+    font-family: var(--font-body);
+    font-size: 18px; /* Larger text for readability */
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-headline);
+    color: var(--color-text-primary);
+  }
+
+  a {
+    @apply transition-colors duration-200;
+    color: var(--color-secondary);
+  }
+
+  a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* 🧩 Components */
+@layer components {
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    font-family: var(--font-headline);
+    @apply font-semibold py-3 px-6 rounded-lg hover:brightness-90 transition duration-200;
+  }
+
+  .btn-secondary {
+    background-color: var(--color-secondary);
+    color: white;
+    font-family: var(--font-headline);
+    @apply py-3 px-6 rounded-lg hover:brightness-95 transition duration-200;
+  }
+
+  .btn-accent {
+    background-color: var(--color-accent);
+    color: black;
+    font-family: var(--font-headline);
+    @apply py-3 px-6 rounded-lg hover:brightness-110 transition duration-200;
+  }
+
+  .hero-gradient-bg {
+    background: var(--bg-gradient-primary);
+  }
+
+  .icon-agri {
+    /* Custom Filipino-inspired icon styling */
+    color: var(--color-primary);
+    @apply w-6 h-6;
+  }
+
+  .text-highlight {
+    color: var(--color-accent);
+  }
+
+  .section-bg {
+    background-color: var(--color-background);
+  }
+
+  .statistic-number {
+    @apply text-3xl font-bold;
+    font-family: var(--font-headline);
+    color: var(--color-primary);
+  }
+
+  .statistic-label {
+    @apply text-sm;
+    color: var(--color-secondary);
+  }
+}

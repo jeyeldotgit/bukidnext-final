@@ -1,0 +1,61 @@
+# General Rule
+
+1. Use TailwindCSS -- It is already installed
+2. Use react-router-dom for routing -- It is already installed
+3. Use pnpm for package management -- It is already installed
+
+** Follow index.css tailwindcss themes for consistent styling
+
+** Focus on building a scalable and maintainable React application
+** Use TypeScript for type safety and better developer experience
+
+** All things should HAPPEN in the src folder
+** Use pnpm whenever dependecy is being used
+
+** Use functional components, purely work with UI only
+** Use mock datas for testing components and pages
+** Create directories, if not already present, for each page and its components
+
+** Always use arrow functions
+
+
+
+
+# Project Structure Context
+
+src/
+├── components/          # Reusable UI components (buttons, cards, etc.)
+│   ├── Home/            # each page should have its own components folder
+│   │   ├── Navbar.tsx
+│   ├── About/
+│   │   ├── Navbar.tsx
+
+│   └── General/          # General components used across multiple pages
+│       ├── Navbar.tsx
+│       ├── Footer.tsx
+│       └── Sidebar.tsx
+├── contexts/            # Context API providers for global state management
+|
+│
+├── types/               # for TypeScript type definitions
+│   ├── User.ts 
+├── pages/               # Route-based page components
+│   ├── Home.tsx
+│   ├── About.tsx
+│   └── Dashboard.tsx
+│
+├── lib/                 # Utilities, helpers, API calls, hooks
+│   ├── api.ts
+│   ├── helpers.ts
+│   └── useAuth.ts
+│
+├──index.css
+│
+├── App.tsx              # Main app component
+└── index.tsx            # React DOM rendering entry point
+
+
+** Refer to the code below in designing the homepage of the application, refactor the code to fit the project structure context above
+// The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
+
+

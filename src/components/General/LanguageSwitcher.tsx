@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 const languages = [
-  { code: 'english', label: 'English' },
   { code: 'tagalog', label: 'Tagalog' },
   { code: 'cebuano', label: 'Cebuano' },
+  { code: 'english', label: 'English' },
 ];
 
 const LanguageSwitcher: React.FC = () => {
-  const [selected, setSelected] = useState('english');
+  const [selected, setSelected] = useState('tagalog');
   const [open, setOpen] = useState(false);
 
   return (
@@ -16,7 +16,7 @@ const LanguageSwitcher: React.FC = () => {
         className="flex items-center text-sm border border-gray-300 rounded-lg px-3 py-1 bg-white cursor-pointer whitespace-nowrap"
         aria-haspopup="listbox"
         aria-expanded={open}
-        aria-label="Select language"
+        aria-label="Pumili ng Wika"
         onClick={() => setOpen((v) => !v)}
       >
         <span>{languages.find(l => l.code === selected)?.label}</span>

@@ -2,7 +2,7 @@ import React from 'react';
 import { recommendedModules } from '../../lib/mockData';
 
 const RecommendedModules: React.FC = () => (
-  <section aria-label="Recommended For You">
+  <section aria-label="Recommended For You" className='mb-8'>
     <div className="flex justify-between items-center mb-4">
       <h3 className="font-bold text-lg">Recommended For You</h3>
       <button className="text-[#2E5A1C] text-sm font-medium cursor-pointer" aria-label="View all recommended modules">View All</button>

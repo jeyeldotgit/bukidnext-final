@@ -2,18 +2,18 @@ import React from 'react';
 
 const getGreeting = (lang: string) => {
   switch (lang) {
-    case 'tagalog':
-      return 'Maligayang pagdating, Magsasaka!';
     case 'cebuano':
       return 'Maayong pag-abot, Mag-uuma!';
-    default:
+    case 'english':
       return 'Welcome, Farmer!';
+    default:
+      return 'Maligayang pagdating, Magsasaka!';
   }
 };
 
-const WelcomeBanner: React.FC<{ language?: string }> = ({ language = 'english' }) => {
+const WelcomeBanner: React.FC<{ language?: string }> = ({ language = 'tagalog' }) => {
   const today = new Date();
-  const dateString = today.toLocaleDateString('en-PH', {
+  const dateString = today.toLocaleDateString('tl-PH', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',

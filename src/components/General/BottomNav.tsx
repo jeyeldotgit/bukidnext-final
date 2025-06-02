@@ -27,18 +27,19 @@ const BottomNav: React.FC = () => {
   const currentTab = getCurrentTab(location.pathname);
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-30">
-      <div className="max-w-7xl mx-auto flex justify-around">
+    <nav className="fixed bottom-0 left-0 right-0 w-full bg-white shadow-lg border-t border-gray-200 z-30">
+      <div className="max-w-7xl mx-auto flex justify-around sm:justify-between">
         {navItems.map(item => (
           <button
             key={item.tab}
             onClick={() => navigate(item.path)}
-            className={`flex flex-col items-center py-3 px-4 ${currentTab === item.tab ? 'text-[#2E5A1C]' : 'text-gray-500'} cursor-pointer whitespace-nowrap`}
+            className={`flex flex-col items-center py-2 px-2 sm:py-3 sm:px-4 ${currentTab === item.tab ? 'text-[#2E5A1C]' : 'text-gray-500'} cursor-pointer whitespace-nowrap w-full focus:outline-none`}
             aria-label={item.label}
             type="button"
+            style={{ minWidth: 0 }}
           >
-            <i className={`${item.icon} text-lg`} aria-hidden="true"></i>
-            <span className="text-xs mt-1">{item.label}</span>
+            <i className={`${item.icon} text-xl sm:text-2xl`} aria-hidden="true"></i>
+            <span className="text-[10px] sm:text-xs mt-0.5 sm:mt-1 hidden xs:inline-block sm:inline-block">{item.label}</span>
           </button>
         ))}
       </div>

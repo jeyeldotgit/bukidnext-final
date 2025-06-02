@@ -4,9 +4,6 @@ const SignInWithFacebook = async () => {
   try {
     const { error, data } = await supabase.auth.signInWithOAuth({
       provider: "facebook",
-      options: {
-        redirectTo: window.location.origin + "/home",
-      },
     });
 
     if (error) {

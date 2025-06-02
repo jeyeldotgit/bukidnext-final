@@ -19,6 +19,7 @@ import Community from "./pages/Community";
 import Articles from "./pages/Articles";
 import Landing from "./pages/Landing";
 import Auth from "./pages/Login";
+import Privacy from "./pages/Privacy";
 
 // Contexts Import
 import { AuthProvider } from "./contexts/AuthProvider";
@@ -51,6 +52,7 @@ const App: React.FC = () => (
           }
         />
         <Route path="/auth" element={<Auth />} />
+        <Route path="/privacy" element={<Privacy />} />
         {/* Authenticated Routes */}
         <Route
           element={

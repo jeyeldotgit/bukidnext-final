@@ -24,7 +24,7 @@ const ProfileModal: React.FC<ProfileModalProps> = ({ open, onClose, user }) => {
         </button>
         <div className="flex flex-col items-center">
           <img
-            src={user?.avatarUrl || "/images/appLogo.png"}
+            src={user?.avatarUrl || require("../../images/appLogo.png")}
             alt={user?.name || "User"}
             className="h-20 w-20 rounded-full object-cover mb-4 border-4 border-[#2E5A1C]"
           />

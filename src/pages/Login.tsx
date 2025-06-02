@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const appLogo = "/images/appLogo.png";
+import appLogo from "../images/appLogo.png";
 
 import SignInWithFacebook from "../api/auth/SignInWithFacebook";
 

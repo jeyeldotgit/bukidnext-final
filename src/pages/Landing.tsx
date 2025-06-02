@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LoadingScreen from "../components/General/LoadingScreen";
 
-const heroBg = "/images/a2825a80a74be3704ad1d2c4c4da4336.jpg";
-const appLogo = "/images/appLogo.png";
+import appLogo from "../images/appLogo.png";
+import heroBg from "../images/a2825a80a74be3704ad1d2c4c4da4336.jpg";
 
 const Landing: React.FC = () => {
   const [loading, setLoading] = useState(false);

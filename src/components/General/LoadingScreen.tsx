@@ -4,7 +4,7 @@ interface LoadingScreenProps {
   message?: string;
 }
 
-const appLogo = "/images/appLogo.png";
+import appLogo from "../../images/appLogo.png";
 
 const LoadingScreen: React.FC<LoadingScreenProps> = ({ message }) => (
   <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white bg-opacity-80">

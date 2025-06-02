@@ -10,7 +10,7 @@ const ProfileIcon: React.FC<ProfileIconProps> = ({ avatarUrl }) => (
     aria-label="Profile"
   >
     <img
-      src={avatarUrl || "/images/appLogo.png"}
+      src={avatarUrl || require("../../images/appLogo.png")}
       alt="Profile"
       className="w-full h-full object-cover rounded-full"
     />

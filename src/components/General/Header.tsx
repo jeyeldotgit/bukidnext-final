@@ -5,7 +5,7 @@ import ProfileIcon from "./ProfileIcon.tsx";
 import ProfileModal from "./ProfileModal";
 import LoadingScreen from "./LoadingScreen";
 
-const appLogo = "/images/appLogo.png";
+import appLogo from "../../images/appLogo.png";
 
 import { useAuth } from "../../hooks/useAuth.ts";
 
